@@ -19,7 +19,6 @@ import com.gustavo.dogapi.viewmodel.DogViewModel
 
 private val CorTexto = Color(0xFF3A444D)
 private val CorBorda = Color(0xFF333333)
-private val CorBotao = Color(0xFF444444)
 
 private const val TELA_ESQUERDA = 0.160f
 private const val TELA_TOPO = 0.270f
@@ -59,7 +58,7 @@ fun DogScreen(viewModel: DogViewModel = viewModel()) {
                     is DogUiState.Success -> AsyncImage(
                         model = state.dog.photoUrl, // Updated here
                         contentDescription = state.dog.breedName,
-                        modifier = Modifier.size(largura * TELA_LARGURA * 0.55f)
+                        modifier = Modifier.size(largura * TELA_LARGURA * 1f)
                     )
                 }
             }
